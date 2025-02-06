@@ -21,12 +21,7 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.*;
 
-//TODO Was ist das hier? Was sagt das ueber die Testart aus?
-//Antwort: Das startet einen Spring Boot Container
-//Damit starten REST-Services, Schedules, Messaging, DB Zugriffe
-//Es erlaubt also Component oder Integration Tests bei denen ein größerer Teil der Applikation
-// im Zusammenspiel mit externen Abhängigkeiten getestet wird
-//Infrastruktur kann verwendet oder gemockt werden, externe Services können verwendet oder gemockt werden
+
 @SpringBootTest
 class JavaTrainingApplicationTests {
 
@@ -38,8 +33,6 @@ class JavaTrainingApplicationTests {
 
 	@Test
 	void getUserWithCountryCodeTest() {
-		//TODO Was fuer eine Testart ist das hier eigentlich?
-		//Antwort: Es ist ein Integrationtest, weil REST-Services aufgerufen werden
 
 		//Arrange
 		//Act
