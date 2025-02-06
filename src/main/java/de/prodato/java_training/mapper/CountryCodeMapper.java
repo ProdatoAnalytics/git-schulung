@@ -9,9 +9,9 @@ import java.util.function.BiFunction;
 
 public class CountryCodeMapper {
 
-    private final BiFunction<String,String,String> mapper;
+    private final BiFunction<Double,Double,String> mapper;
 
-    public CountryCodeMapper(BiFunction<String,String,String> mapper) {
+    public CountryCodeMapper(BiFunction<Double,Double,String> mapper) {
         this.mapper = mapper;
     }
 
