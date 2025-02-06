@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Geo{
-	private String lng;
-	private String lat;
+	private Double lng;
+	private Double lat;
 }
