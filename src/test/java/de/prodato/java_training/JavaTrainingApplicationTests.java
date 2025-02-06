@@ -50,7 +50,7 @@ class JavaTrainingApplicationTests {
 				.returns(7, from(User::getId))
 				.returns("Kurtis Weissnat", from(User::getName))
 				.returns("Johns Group", from( u -> u.getCompany().getName()))
-				.returns("GB", from( u -> u.getAddress().getCountryCode()));
+				.returns("LY", from( u -> u.getAddress().getCountryCode()));
 	}
 
 	@Test
@@ -77,8 +77,8 @@ class JavaTrainingApplicationTests {
 						.city("TestCity")
 						.zipcode("12345")
 						.geo(Geo.builder()
-								.lat("120")
-								.lng("100")
+								.lat(120.0)
+								.lng(100.0)
 								.build())
 						.build())
 				.company(Company.builder()

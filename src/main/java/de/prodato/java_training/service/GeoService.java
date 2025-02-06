@@ -11,10 +11,9 @@ import java.util.Optional;
 @Service
 public class GeoService {
 
-    public String getCountryCodeFromCoordinates(String latitude, String longitude) {
+    public String getCountryCodeFromCoordinates(double latitude, double longitude) {
         ReverseGeocoder geocoder = new ReverseGeocoder();
-        String countryCode = "";
-        Optional<Country> country = geocoder.getCountry(51.507222, -0.1275);
+        Optional<Country> country = geocoder.getCountry(latitude, longitude);
         return country.map(Country::iso).orElse(null);
 
     }
