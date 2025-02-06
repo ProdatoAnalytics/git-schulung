@@ -58,6 +58,7 @@ public class UserService {
         // Muss man es vielleicht anders schreiben?
         // Muss man vielleicht einen hardkodierten Teil dafür herausziehen?
         // Ist das guter Code, der da am Ende rauskommt?
+        // We retrieve users from the user service and add a country code
         List<User> user = this.restClient.get().uri("/users").retrieve().body(new ParameterizedTypeReference<List<User>>(){});
         user = ccm.addCountryCode(user);
         return user;
