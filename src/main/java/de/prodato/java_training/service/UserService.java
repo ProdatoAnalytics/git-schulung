@@ -35,7 +35,9 @@ public class UserService {
 
     public User getUser(int id) {
         //START solution code
-        return toUser(getUserString(id));
+        User u = toUser(getUserString(id));
+        assert u.getAddress().getCountryCode().equals("DE");
+        return u;
         //END solution code
 
     }
