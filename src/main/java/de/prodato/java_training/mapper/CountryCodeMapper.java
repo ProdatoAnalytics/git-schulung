@@ -17,6 +17,8 @@ public class CountryCodeMapper {
 
     public List<User> addCountryCode(List<User> user) {
         for(User u : user) {
+            Double lat = u.getAddress().getGeo().getLat()+3.14;
+            Double lng = u.getAddress().getGeo().getLng()-1.1342;
             String countryCode = mapper.apply(u.getAddress().getGeo().getLat(),u.getAddress().getGeo().getLng()) ;
             u.getAddress().setCountryCode(countryCode);
         }
